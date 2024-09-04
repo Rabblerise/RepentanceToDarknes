@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpf2jqvf15itn"]
+
+[ext_resource type="Script" path="res://Objects/MainCharacter/Scripts/Player.gd" id="1_lyjg6"]
+[ext_resource type="SpriteFrames" uid="uid://crj4dnittq261" path="res://Objects/MainCharacter/Scripts/CharacterSpriteFrame.tres" id="2_ycglk"]
+[ext_resource type="Script" path="res://Objects/MainCharacter/Scripts/CameraPivot.gd" id="3_s02ll"]
+[ext_resource type="Script" path="res://Objects/Chaos/Scripts/Chaos.gd" id="4_38m4j"]
+[ext_resource type="Texture2D" uid="uid://drbwaptbeoul4" path="res://Objects/Chaos/ChaosBallMod.png" id="4_bucnu"]
+[ext_resource type="Texture2D" uid="uid://chmwxntm2loo6" path="res://Scenes/Location/Level1/Textures/Light/MainLight.png" id="4_hphps"]
+
+[node name="Player" type="CharacterBody2D"]
+platform_wall_layers = 1
+script = ExtResource("1_lyjg6")
+
+[node name="PlayerSprites" type="AnimatedSprite2D" parent="."]
+position = Vector2(43, 3)
+scale = Vector2(0.359848, 0.359848)
+sprite_frames = ExtResource("2_ycglk")
+animation = &"Rotate"
+autoplay = "Rotate"
+frame_progress = 0.974583
+speed_scale = 2.0
+
+[node name="CameraPivot" type="Marker2D" parent="."]
+position = Vector2(100, 0)
+script = ExtResource("3_s02ll")
+
+[node name="Camera2D" type="Camera2D" parent="CameraPivot"]
+position = Vector2(42, 1)
+process_callback = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(24, 69, 70, 69, 70, -35, 48, -62, 24, -35)
+
+[node name="Chaos" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+slide_on_ceiling = false
+floor_stop_on_slope = false
+floor_block_on_wall = false
+script = ExtResource("4_38m4j")
+
+[node name="ChaosBallMod" type="Sprite2D" parent="Chaos"]
+position = Vector2(123, -71)
+texture = ExtResource("4_bucnu")
+
+[node name="PointLight2D" type="PointLight2D" parent="Chaos"]
+position = Vector2(124, -77)
+energy = 1.22
+texture = ExtResource("4_hphps")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Chaos"]
+z_index = 1
+polygon = PackedVector2Array(123, -58, 107, -75, 123, -92, 140, -75)

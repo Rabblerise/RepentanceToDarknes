@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr6b366d25ufu"]
+
+[ext_resource type="Script" path="res://UI/Scripts/ChaosUI.gd" id="1_sr5k0"]
+[ext_resource type="Script" path="res://Objects/Chaos/Scripts/ChatBot.cs" id="2_2gj1n"]
+
+[node name="ChaosUi" type="Node2D"]
+script = ExtResource("1_sr5k0")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+light_mask = 3
+visibility_layer = 2
+offset_left = 2.0
+offset_top = 80.0
+offset_right = 304.0
+offset_bottom = 142.0
+
+[node name="Label" type="Label" parent="."]
+light_mask = 3
+visibility_layer = 2
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 303.0
+offset_bottom = 84.0
+
+[node name="ChatBot" type="Node2D" parent="."]
+top_level = true
+light_mask = 3
+visibility_layer = 3
+script = ExtResource("2_2gj1n")

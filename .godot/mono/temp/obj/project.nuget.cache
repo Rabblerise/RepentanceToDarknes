@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "PyCpAa9H4PmkL8lD7Apgo2x3EyS0EH1XGwbhny+v382HUFNFlrT4YVX0PMVkFVDKVUcc8QlSVdj4TWky6x3scA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\GameProjects\\RepentanceToDarknes\\RepentanceToDarknes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.ai.directml\\1.14.1\\microsoft.ai.directml.1.14.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.ml.onnxruntime\\1.18.0\\microsoft.ml.onnxruntime.1.18.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.ml.onnxruntime.directml\\1.18.0\\microsoft.ml.onnxruntime.directml.1.18.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.ml.onnxruntime.managed\\1.18.0\\microsoft.ml.onnxruntime.managed.1.18.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

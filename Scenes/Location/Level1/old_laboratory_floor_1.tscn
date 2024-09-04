@@ -1,0 +1,233 @@
+[gd_scene load_steps=21 format=3 uid="uid://x2v4b1siwydu"]
+
+[ext_resource type="Script" path="res://Scenes/GlobalSceneScripts/ChangeLocation.gd" id="1_4nfxt"]
+[ext_resource type="Script" path="res://Scenes/Location/Level1/Scripts/old_laboratory_floor_1.gd" id="1_jssdy"]
+[ext_resource type="Texture2D" uid="uid://c5hhc6323o08l" path="res://Scenes/Location/Level1/Textures/Objects/Architectural/elevator.png" id="2_itryn"]
+[ext_resource type="Texture2D" uid="uid://2n6u8ubm5mt7" path="res://Scenes/Location/Level1/Textures/Objects/Architectural/Apparatus.png" id="3_hcfut"]
+[ext_resource type="Texture2D" uid="uid://dd0kwu0yvsjxm" path="res://Scenes/Location/Level1/Textures/Objects/Architectural/OldLabPrisonDoor.png" id="4_vla5t"]
+[ext_resource type="Texture2D" uid="uid://bwmrxoi5j7syk" path="res://Scenes/Location/Level1/Textures/Walls/OldLabWall.png" id="5_fdcyv"]
+[ext_resource type="Texture2D" uid="uid://duru7titruv75" path="res://Scenes/Location/Level1/Textures/Floors/OldLabFloor.png" id="6_rnxtl"]
+[ext_resource type="Texture2D" uid="uid://chmwxntm2loo6" path="res://Scenes/Location/Level1/Textures/Light/MainLight.png" id="7_wt1vl"]
+[ext_resource type="Texture2D" uid="uid://dm1om0g3p2xhe" path="res://Scenes/Location/Level1/Textures/Objects/Terrain/OldLabStoneFloor1.png" id="8_0vgvk"]
+[ext_resource type="PackedScene" uid="uid://bpf2jqvf15itn" path="res://Objects/MainCharacter/Scripts/player.tscn" id="9_q7v11"]
+[ext_resource type="AudioStream" uid="uid://by173exc740dj" path="res://Scenes/Audio/Music/Laboratory_floor1.mp3" id="11_wg7b0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_840m0"]
+size = Vector2(199.876, 292.411)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mek23"]
+polygon = PackedVector2Array(-451, -235, -451, -316, 2546, -311, 2550, -232)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fyax3"]
+polygon = PackedVector2Array(-447, 211, 2570, 219, 2571, 596, -443, 595)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vuax"]
+texture = ExtResource("5_fdcyv")
+texture_region_size = Vector2i(300, 300)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dm2yr"]
+tile_size = Vector2i(300, 300)
+sources/0 = SubResource("TileSetAtlasSource_5vuax")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vrr3x"]
+texture = ExtResource("6_rnxtl")
+texture_region_size = Vector2i(300, 30)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7i3wx"]
+tile_size = Vector2i(300, 30)
+sources/0 = SubResource("TileSetAtlasSource_vrr3x")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlrbe"]
+size = Vector2(3007.5, 144.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iw381"]
+size = Vector2(2989, 75)
+
+[node name="old_laboratory_floor_1" type="Node2D"]
+script = ExtResource("1_jssdy")
+
+[node name="Entry" type="Node2D" parent="." groups=["exits"]]
+position = Vector2(403.095, 6.10472)
+scale = Vector2(0.721766, 0.721766)
+script = ExtResource("1_4nfxt")
+next_scene = "res://Scenes/Location/Level1/elevator_shaft_old_laboratory.tscn"
+metadata/_edit_group_ = true
+
+[node name="ElevatorTexture" type="Sprite2D" parent="Entry"]
+position = Vector2(1911.84, -81.889)
+scale = Vector2(1.12294, 1.12294)
+texture = ExtResource("2_itryn")
+
+[node name="ToNextScene" type="Area2D" parent="Entry"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entry/ToNextScene"]
+position = Vector2(1907.69, -83.9672)
+scale = Vector2(1.12294, 1.12294)
+shape = SubResource("RectangleShape2D_840m0")
+
+[node name="Apparatus" type="Sprite2D" parent="."]
+position = Vector2(1345, -4)
+scale = Vector2(0.468667, 0.468667)
+texture = ExtResource("3_hcfut")
+
+[node name="OldLabPrisonDoor6" type="Sprite2D" parent="."]
+position = Vector2(1212, -25)
+scale = Vector2(0.656, 0.656)
+texture = ExtResource("4_vla5t")
+
+[node name="OldLabPrisonDoor7" type="Sprite2D" parent="."]
+position = Vector2(1505, -25)
+scale = Vector2(0.656, 0.656)
+texture = ExtResource("4_vla5t")
+
+[node name="OldLabPrisonDoor3" type="Sprite2D" parent="."]
+position = Vector2(294, -26)
+scale = Vector2(0.656, 0.656)
+texture = ExtResource("4_vla5t")
+
+[node name="OldLabPrisonDoor4" type="Sprite2D" parent="."]
+position = Vector2(599, -25)
+scale = Vector2(0.656, 0.656)
+texture = ExtResource("4_vla5t")
+
+[node name="OldLabPrisonDoor5" type="Sprite2D" parent="."]
+position = Vector2(901, -25)
+scale = Vector2(0.656, 0.656)
+texture = ExtResource("4_vla5t")
+
+[node name="OldLabPrisonDoor2" type="Sprite2D" parent="."]
+position = Vector2(2, -25)
+scale = Vector2(0.656, 0.656)
+texture = ExtResource("4_vla5t")
+
+[node name="OldLabPrisonDoor" type="Sprite2D" parent="."]
+position = Vector2(-299, -25)
+scale = Vector2(0.655963, 0.655963)
+texture = ExtResource("4_vla5t")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_mek23")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(-11, -71)
+occluder = SubResource("OccluderPolygon2D_fyax3")
+
+[node name="WallMap" type="TileMap" parent="."]
+position = Vector2(149, 67)
+tile_set = SubResource("TileSet_dm2yr")
+format = 2
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(-2, 0, 3, -1, 65536, 3, -65536, 131072, 3, -65535, 196608, 3, -65534, 262144, 3, -65533, 327680, 3, -65532, 393216, 3, -65531, 458752, 3, -65530, 524288, 3, -65529, 589824, 3)
+
+[node name="FloorMap" type="TileMap" parent="."]
+position = Vector2(149, 7)
+tile_set = SubResource("TileSet_7i3wx")
+format = 2
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(196606, 0, 0, 196607, 65536, 0, 131072, 131072, 0, 131073, 196608, 0, 131074, 262144, 0, 131075, 327680, 0, 131076, 393216, 0, 131077, 458752, 0, 131078, 524288, 0, 131079, 589824, 0, 262142, 0, 1, 327678, 0, 2, 393214, 0, 3, 458750, 0, 4, 262143, 0, 1, 327679, 0, 2, 393215, 0, 3, 458751, 0, 4, 196608, 0, 1, 262144, 0, 2, 327680, 0, 3, 393216, 0, 4, 196609, 0, 1, 262145, 0, 2, 327681, 0, 3, 393217, 0, 4, 196610, 0, 1, 262146, 0, 2, 327682, 0, 3, 393218, 0, 4, 196611, 0, 1, 262147, 0, 2, 327683, 0, 3, 393219, 0, 4, 196612, 0, 1, 262148, 0, 2, 327684, 0, 3, 393220, 0, 4, 196613, 0, 1, 262149, 0, 2, 327685, 0, 3, 393221, 0, 4, 196614, 0, 1, 262150, 0, 2, 327686, 0, 3, 393222, 0, 4, 196615, 0, 1, 262151, 0, 2, 327687, 0, 3, 393223, 0, 4, -655354, 65536, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1053.25, 138.75)
+shape = SubResource("RectangleShape2D_xlrbe")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1043.5, -273)
+shape = SubResource("RectangleShape2D_iw381")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+blend_mode = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1248, -189)
+scale = Vector2(2, 2)
+color = Color(1, 1, 0.133333, 1)
+shadow_enabled = true
+texture = ExtResource("7_wt1vl")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(902, -8)
+
+[node name="OldLabStoneFloor1" type="Sprite2D" parent="StaticBody2D4"]
+texture = ExtResource("8_0vgvk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4"]
+polygon = PackedVector2Array(-97, 74, -97, 14, -44, -72, -1, -63, 9, -23, 57, 7, 94, 74)
+
+[node name="Player" parent="." instance=ExtResource("9_q7v11")]
+position = Vector2(-168, -4)
+
+[node name="AudioBackgroundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_wg7b0")
+bus = &"Music"
+
+[connection signal="nextEnrty" from="Entry" to="Player" method="_on_entry_next_enrty"]
+[connection signal="body_entered" from="Entry/ToNextScene" to="Entry" method="_on_to_next_scene_body_entered"]
+[connection signal="body_exited" from="Entry/ToNextScene" to="Entry" method="_on_to_next_scene_body_exited"]

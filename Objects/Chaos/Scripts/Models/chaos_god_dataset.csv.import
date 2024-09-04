@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bfig1id1kanyu"
+
+[deps]
+
+files=["res://Objects/Chaos/Scripts/Models/chaos_god_dataset.User.translation", "res://Objects/Chaos/Scripts/Models/chaos_god_dataset.Bot.translation", "res://Objects/Chaos/Scripts/Models/chaos_god_dataset.Response.translation"]
+
+source_file="res://Objects/Chaos/Scripts/Models/chaos_god_dataset.csv"
+dest_files=["res://Objects/Chaos/Scripts/Models/chaos_god_dataset.User.translation", "res://Objects/Chaos/Scripts/Models/chaos_god_dataset.Bot.translation", "res://Objects/Chaos/Scripts/Models/chaos_god_dataset.Response.translation"]
+
+[params]
+
+compress=true
+delimiter=0

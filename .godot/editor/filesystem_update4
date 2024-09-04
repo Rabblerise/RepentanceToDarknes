@@ -1,0 +1,7 @@
+res://Scenes/Location/Level1/old_laboratory_floor_1.tscn
+res://Objects/MainCharacter/Scripts/CharacterSpriteFrame.tres
+res://Scenes/Location/Level1/elevator_shaft_old_laboratory.tscn
+res://Objects/MainCharacter/Scripts/player.tscn
+res://UI/ChaosUI.tscn
+res://Scenes/Location/Level1/old_laboratory_floor_2.tscn
+res://Objects/Chaos/Scripts/Chaos.gd

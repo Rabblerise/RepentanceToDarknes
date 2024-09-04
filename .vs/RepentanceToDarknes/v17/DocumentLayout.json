@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\GameProjects\\RepentanceToDarknes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA600927-8999-40AD-AFA4-E7BBD992D84E}|RepentanceToDarknes.csproj|c:\\users\\admin\\documents\\gameprojects\\repentancetodarknes\\repentancetodarknes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CA600927-8999-40AD-AFA4-E7BBD992D84E}|RepentanceToDarknes.csproj|solutionrelative:repentancetodarknes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA600927-8999-40AD-AFA4-E7BBD992D84E}|RepentanceToDarknes.csproj|c:\\users\\admin\\documents\\gameprojects\\repentancetodarknes\\objects\\chaos\\scripts\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA600927-8999-40AD-AFA4-E7BBD992D84E}|RepentanceToDarknes.csproj|solutionrelative:objects\\chaos\\scripts\\chatbot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatBot.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GameProjects\\RepentanceToDarknes\\Objects\\Chaos\\Scripts\\ChatBot.cs",
+              "RelativeDocumentMoniker": "Objects\\Chaos\\Scripts\\ChatBot.cs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GameProjects\\RepentanceToDarknes\\Objects\\Chaos\\Scripts\\ChatBot.cs",
+              "RelativeToolTip": "Objects\\Chaos\\Scripts\\ChatBot.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAowFcAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T00:49:35.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RepentanceToDarknes.csproj",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GameProjects\\RepentanceToDarknes\\RepentanceToDarknes.csproj",
+              "RelativeDocumentMoniker": "RepentanceToDarknes.csproj",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GameProjects\\RepentanceToDarknes\\RepentanceToDarknes.csproj",
+              "RelativeToolTip": "RepentanceToDarknes.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-19T00:45:46.811Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

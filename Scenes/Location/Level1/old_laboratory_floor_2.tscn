@@ -1,0 +1,164 @@
+[gd_scene load_steps=16 format=3 uid="uid://bptdivqeiawqp"]
+
+[ext_resource type="PackedScene" uid="uid://bpf2jqvf15itn" path="res://Objects/MainCharacter/Scripts/player.tscn" id="1_cai84"]
+[ext_resource type="Script" path="res://Scenes/GlobalSceneScripts/ChangeLocation.gd" id="1_ef1g0"]
+[ext_resource type="Script" path="res://Scenes/Location/Level1/old_laboratory_floor_2.gd" id="1_qe40m"]
+[ext_resource type="Texture2D" uid="uid://bwmrxoi5j7syk" path="res://Scenes/Location/Level1/Textures/Walls/OldLabWall.png" id="2_q8lv2"]
+[ext_resource type="Texture2D" uid="uid://c5hhc6323o08l" path="res://Scenes/Location/Level1/Textures/Objects/Architectural/elevator.png" id="2_uy0h1"]
+[ext_resource type="Texture2D" uid="uid://duru7titruv75" path="res://Scenes/Location/Level1/Textures/Floors/OldLabFloor.png" id="3_1n82g"]
+[ext_resource type="Texture2D" uid="uid://dkacn65kb5swg" path="res://Objects/Enemies/Drone.png" id="6_si0s4"]
+[ext_resource type="AudioStream" uid="uid://b6lcny71dge" path="res://Scenes/Audio/Music/Laboratory_floor2.mp3" id="8_q720b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iadkr"]
+size = Vector2(199.876, 292.411)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wf4um"]
+texture = ExtResource("2_q8lv2")
+texture_region_size = Vector2i(300, 300)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mslcm"]
+tile_size = Vector2i(300, 300)
+sources/1 = SubResource("TileSetAtlasSource_wf4um")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_em0gv"]
+texture = ExtResource("3_1n82g")
+texture_region_size = Vector2i(300, 30)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_uin1f"]
+tile_size = Vector2i(300, 30)
+sources/26 = SubResource("TileSetAtlasSource_em0gv")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lex1v"]
+size = Vector2(3000.5, 140.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tt5r"]
+radius = 5.19986
+height = 24.2593
+
+[node name="old_laboratory_floor_2" type="Node2D"]
+script = ExtResource("1_qe40m")
+
+[node name="Entry" type="Node2D" parent="." groups=["exits"]]
+position = Vector2(-1335, -45)
+scale = Vector2(0.721766, 0.721766)
+script = ExtResource("1_ef1g0")
+next_scene = "res://Scenes/Location/Level1/elevator_shaft_old_laboratory.tscn"
+metadata/_edit_group_ = true
+
+[node name="ElevatorTexture" type="Sprite2D" parent="Entry"]
+position = Vector2(1911.84, -81.889)
+scale = Vector2(1.12294, 1.12294)
+texture = ExtResource("2_uy0h1")
+
+[node name="ToNextScene" type="Area2D" parent="Entry"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entry/ToNextScene"]
+position = Vector2(1907.69, -83.9672)
+scale = Vector2(1.12294, 1.12294)
+shape = SubResource("RectangleShape2D_iadkr")
+
+[node name="Player" parent="." instance=ExtResource("1_cai84")]
+position = Vector2(-2, -44)
+
+[node name="WallMap" type="TileMap" parent="."]
+position = Vector2(-1343, 23)
+tile_set = SubResource("TileSet_mslcm")
+format = 2
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(-2, 1, 3, -1, 65537, 3, -65536, 131073, 3, -65535, 196609, 3, -65534, 262145, 3, -65533, 327681, 3, -65532, 393217, 3, -65531, 458753, 3, -65530, 524289, 3, -65529, 589825, 3)
+
+[node name="FloorMap" type="TileMap" parent="."]
+position = Vector2(-1343, -37)
+tile_set = SubResource("TileSet_uin1f")
+format = 2
+layer_0/z_index = -1
+layer_0/tile_data = PackedInt32Array(196606, 26, 0, 196607, 65562, 0, 131072, 131098, 0, 131073, 196634, 0, 131074, 262170, 0, 131075, 327706, 0, 131076, 393242, 0, 131077, 458778, 0, 131078, 524314, 0, 131079, 589850, 0, 262142, 26, 1, 327678, 26, 2, 393214, 26, 3, 458750, 26, 4, 262143, 26, 1, 327679, 26, 2, 393215, 26, 3, 458751, 26, 4, 196608, 26, 1, 262144, 26, 2, 327680, 26, 3, 393216, 26, 4, 196609, 26, 1, 262145, 26, 2, 327681, 26, 3, 393217, 26, 4, 196610, 26, 1, 262146, 26, 2, 327682, 26, 3, 393218, 26, 4, 196611, 26, 1, 262147, 26, 2, 327683, 26, 3, 393219, 26, 4, 196612, 26, 1, 262148, 26, 2, 327684, 26, 3, 393220, 26, 4, 196613, 26, 1, 262149, 26, 2, 327685, 26, 3, 393221, 26, 4, 196614, 26, 1, 262150, 26, 2, 327686, 26, 3, 393222, 26, 4, 196615, 26, 1, 262151, 26, 2, 327687, 26, 3, 393223, 26, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-450.25, 94.75)
+shape = SubResource("RectangleShape2D_lex1v")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+blend_mode = 2
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-1312, 0)
+scale = Vector2(7.5002, -8.65647)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0.533319, 6.81571)
+shape = SubResource("CapsuleShape2D_2tt5r")
+
+[node name="Drone" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-1.59995, 9.81924)
+scale = Vector2(0.0673077, -0.0583172)
+texture = ExtResource("6_si0s4")
+flip_h = true
+
+[node name="AudioBackgroundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_q720b")
+bus = &"Music"
+
+[connection signal="body_entered" from="Entry/ToNextScene" to="Entry" method="_on_to_next_scene_body_entered"]
+[connection signal="body_exited" from="Entry/ToNextScene" to="Entry" method="_on_to_next_scene_body_exited"]

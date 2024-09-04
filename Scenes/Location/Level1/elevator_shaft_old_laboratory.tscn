@@ -1,0 +1,183 @@
+[gd_scene load_steps=16 format=3 uid="uid://cfntaoopqy3xu"]
+
+[ext_resource type="PackedScene" uid="uid://bpf2jqvf15itn" path="res://Objects/MainCharacter/Scripts/player.tscn" id="1_lj1p6"]
+[ext_resource type="Texture2D" uid="uid://chmwxntm2loo6" path="res://Scenes/Location/Level1/Textures/Light/MainLight.png" id="2_6ng8j"]
+[ext_resource type="Script" path="res://Scenes/GlobalSceneScripts/ChangeLocation.gd" id="3_2tww8"]
+[ext_resource type="Texture2D" uid="uid://c5hhc6323o08l" path="res://Scenes/Location/Level1/Textures/Objects/Architectural/elevator.png" id="4_fw255"]
+[ext_resource type="Texture2D" uid="uid://bs67tu3mmhmwq" path="res://Objects/Terrain/OldPipe.png" id="5_dokic"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wo18"]
+size = Vector2(199.876, 292.411)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bh3em"]
+size = Vector2(133.5, 41)
+
+[sub_resource type="QuadMesh" id="QuadMesh_awxdv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k008j"]
+size = Vector2(345, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c68oi"]
+size = Vector2(66, 1300.5)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ojbo8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24phr"]
+size = Vector2(61.5, 1297.75)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5jdqj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dptl3"]
+size = Vector2(475.75, 56)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hho1f"]
+
+[node name="ElevatorShaftOldLaboratory" type="Node2D"]
+
+[node name="Entry2" type="Node2D" parent="." groups=["exits"]]
+modulate = Color(1, 1, 1, 0.113725)
+position = Vector2(-836, -638)
+scale = Vector2(0.520946, 0.520946)
+script = ExtResource("3_2tww8")
+next_scene = "res://Scenes/Location/Level1/old_laboratory_floor_2.tscn"
+metadata/_edit_group_ = true
+
+[node name="ElevatorTexture" type="Sprite2D" parent="Entry2"]
+position = Vector2(1952.22, -47.9896)
+scale = Vector2(1.12294, 1.12294)
+texture = ExtResource("4_fw255")
+
+[node name="ToNextScene" type="Area2D" parent="Entry2"]
+position = Vector2(0.000117162, 0.000117162)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entry2/ToNextScene"]
+position = Vector2(1954.14, -44.1504)
+scale = Vector2(1.12294, 1.12294)
+shape = SubResource("RectangleShape2D_2wo18")
+
+[node name="Player" parent="." instance=ExtResource("1_lj1p6")]
+position = Vector2(108, -62)
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2(-3, -525)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(70.25, -18.5)
+shape = SubResource("RectangleShape2D_bh3em")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D7"]
+modulate = Color(0.105882, 0.0627451, 0, 1)
+position = Vector2(67, -16)
+rotation = 3.14159
+scale = Vector2(141.673, -42.94)
+mesh = SubResource("QuadMesh_awxdv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(176, 30)
+shape = SubResource("RectangleShape2D_k008j")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+modulate = Color(0.105882, 0.0627451, 0, 1)
+position = Vector2(170.875, 28)
+scale = Vector2(474.25, 53.5)
+mesh = SubResource("QuadMesh_awxdv")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-33, -597.75)
+shape = SubResource("RectangleShape2D_c68oi")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2"]
+modulate = Color(0.105882, 0.0627451, 0, 1)
+position = Vector2(-35.375, -622.875)
+scale = Vector2(64.75, 1358.25)
+mesh = SubResource("QuadMesh_ojbo8")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(378, -599.125)
+shape = SubResource("RectangleShape2D_24phr")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D3"]
+modulate = Color(0.105882, 0.0627451, 0, 1)
+position = Vector2(378.875, -624.875)
+scale = Vector2(64.25, 1358.25)
+mesh = SubResource("BoxMesh_5jdqj")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(171.125, -1276)
+shape = SubResource("RectangleShape2D_dptl3")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D4"]
+modulate = Color(0.105882, 0.0627451, 0, 1)
+position = Vector2(171.337, -1279.5)
+scale = Vector2(-479.112, -63.4706)
+mesh = SubResource("BoxMesh_hho1f")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(160, -103)
+scale = Vector2(0.329264, 0.378672)
+color = Color(1, 1, 0.133333, 1)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("2_6ng8j")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+blend_mode = 2
+
+[node name="Entry" type="Node2D" parent="." groups=["exits"]]
+modulate = Color(1, 1, 1, 0.113725)
+position = Vector2(-1207, -61)
+scale = Vector2(0.721766, 0.721766)
+script = ExtResource("3_2tww8")
+next_scene = "res://Scenes/Location/Level1/old_laboratory_floor_1.tscn"
+metadata/_edit_group_ = true
+
+[node name="ElevatorTexture" type="Sprite2D" parent="Entry"]
+position = Vector2(1911.84, -81.889)
+scale = Vector2(1.12294, 1.12294)
+texture = ExtResource("4_fw255")
+
+[node name="ToNextScene" type="Area2D" parent="Entry"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entry/ToNextScene"]
+position = Vector2(1907.69, -83.9672)
+scale = Vector2(1.12294, 1.12294)
+shape = SubResource("RectangleShape2D_2wo18")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(7, 82)
+
+[node name="OldPipe" type="Sprite2D" parent="StaticBody2D6"]
+position = Vector2(552, -374)
+texture = ExtResource("5_dokic")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D6"]
+polygon = PackedVector2Array(296, -319, 294, -297, 252, -295, 250, -452, 294, -453, 295, -430, 428, -428, 425, -319)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(195, -551)
+rotation = -3.44535
+
+[node name="OldPipe" type="Sprite2D" parent="StaticBody2D5"]
+position = Vector2(552, -374)
+texture = ExtResource("5_dokic")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
+polygon = PackedVector2Array(296, -319, 294, -297, 252, -295, 250, -452, 294, -453, 295, -430, 428, -428, 425, -319)
+
+[connection signal="body_entered" from="Entry2/ToNextScene" to="Entry2" method="_on_to_next_scene_body_entered"]
+[connection signal="body_exited" from="Entry2/ToNextScene" to="Entry2" method="_on_to_next_scene_body_exited"]
+[connection signal="body_entered" from="Entry/ToNextScene" to="Entry" method="_on_to_next_scene_body_entered"]
+[connection signal="body_exited" from="Entry/ToNextScene" to="Entry" method="_on_to_next_scene_body_exited"]

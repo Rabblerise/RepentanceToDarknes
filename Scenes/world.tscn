@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2jvmhwujjg37"]
+
+[ext_resource type="PackedScene" uid="uid://ctjselxh0636b" path="res://Scenes/Location/Level1/Textures/Objects/Architectural/bottle.blend" id="1_yce54"]
+
+[node name="World" type="Node2D"]
+
+[node name="bottle" parent="." instance=ExtResource("1_yce54")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21232, 0, 22.7352)
